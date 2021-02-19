@@ -12,10 +12,11 @@ import myboot.vega2k.rest.events.EventController;
 @RestController
 public class IndexController {
 
-    @GetMapping("/api")
+	@GetMapping("/api")
     public RepresentationModel index() {
-        var index = new RepresentationModel<>();
+        var index = new RepresentationModel ();
         index.add(linkTo(EventController.class).withRel("events"));
         return index;
     }
+
 }
